@@ -1,0 +1,13 @@
+{
+  "name": "fullstack-app",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "concurrently \"npm run dev --prefix backend\" \"npm start --prefix frontend\"",
+    "build": "concurrently \"npm run build --prefix backend\" \"npm run build --prefix frontend\"",
+    "prisma:generate": "npm run prisma:generate --prefix backend"
+  },
+  "devDependencies": {
+    "concurrently": "^6.2.1"
+  }
+}
